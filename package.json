@@ -1,0 +1,16 @@
+{
+  "name": "backend-revision-1",
+  "version": "1.0.0",
+  "description": "revision for backendend upto mongo db connection",
+  "keywords": [
+    "backend"
+  ],
+  "license": "ISC",
+  "author": "ritesh",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  }
+}
