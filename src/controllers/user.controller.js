@@ -2,8 +2,7 @@ import { asyncHandler } from '../utils/asynchandler.js'
 import { ApiError } from "../utils/ApiError.js"
 import { User } from "../models/user.model.js"
 import { uploadOnCloudinary } from "../utils/cloudinary.js"
-import { ApiResponse } from "../utils/ApiResponse.js";
-
+import { ApiResponse } from "../utils/apiresponse.js";
 
 
 const registeruser = asyncHandler(async (req, res) => {
@@ -19,7 +18,7 @@ const registeruser = asyncHandler(async (req, res) => {
 
 
 
-    const { email, username, password } = req.body
+    const { fullName, email, username, password } = req.body
     // console.log(email);
 
     if (
