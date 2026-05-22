@@ -1,5 +1,17 @@
-import { Router } from 'express'
-import { registeruser } from '../controllers/user.controller.js'
+import { Router } from "express";
+import {
+    loginUser,
+    logoutUser,
+    registerUser,
+    refreshAccessToken,
+    changeCurrentPassword,
+    getCurrentUser,
+    updateUserAvatar,
+    updateUserCoverImage,
+    getUserChannelProfile,
+    getWatchHistory,
+    updateAccountDetails
+} from "../controllers/user.controller.js";
 import { upload } from "../middlewares/multer.middleware.js"
 
 
@@ -16,9 +28,10 @@ router.route("/register").post(
             maxCount: 1
         }
     ]),
-
-    registeruser
+    registerUser
 )
+
+router.route("/login").post(loginUser)
 
 
 export default router
